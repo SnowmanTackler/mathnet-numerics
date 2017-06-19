@@ -42,11 +42,11 @@ namespace MathNet.Numerics.Providers.LinearAlgebra
     /// </summary>
     public partial class ManagedLinearAlgebraProvider : ILinearAlgebraProvider
     {
-        private Variation _variation;
+        private readonly Variation _variation;
 
         public ManagedLinearAlgebraProvider()
         {
-            _variation = Variation.Original;
+            _variation = Variation.Experimental;
         }
 
         internal ManagedLinearAlgebraProvider(Variation variation)
@@ -74,7 +74,6 @@ namespace MathNet.Numerics.Providers.LinearAlgebra
         {
             return "Managed";
         }
-
 
         /// <summary>
         /// Assumes that <paramref name="numRows"/> and <paramref name="numCols"/> have already been transposed.

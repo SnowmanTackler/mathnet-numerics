@@ -27,12 +27,12 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 // </copyright>
 
+using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using MathNet.Numerics.Threading;
 
-#if PORTABLE
-using System;
-#else
+#if !PORTABLE
 using System.Runtime;
 using System.Threading;
 #endif
@@ -42,8 +42,11 @@ namespace MathNet.Numerics.Random
     /// <summary>
     /// A random number generator based on the <see cref="System.Random"/> class in the .NET library.
     /// </summary>
+    [Serializable]
+    [DataContract(Namespace = "urn:MathNet/Numerics/Random")]
     public class SystemRandomSource : RandomSource
     {
+        [DataMember(Order = 1)]
         readonly System.Random _random;
 
         /// <summary>
