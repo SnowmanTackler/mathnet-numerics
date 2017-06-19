@@ -186,7 +186,7 @@ namespace MathNet.Numerics.LinearAlgebra.Double
         /// </summary>
         /// <param name="other">The matrix to multiply with.</param>
         /// <param name="result">The result of the multiplication.</param>
-        protected override void DoMultiply(Matrix<double> other, Matrix<double> result)
+        public override void DoMultiply(Matrix<double> other, Matrix<double> result)
         {
             for (var i = 0; i < RowCount; i++)
             {

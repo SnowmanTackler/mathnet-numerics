@@ -338,7 +338,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex32
         /// </summary>
         /// <param name="other">The matrix to multiply with.</param>
         /// <param name="result">The result of the multiplication.</param>
-        protected override void DoMultiply(Matrix<Complex32> other, Matrix<Complex32> result)
+        public override void DoMultiply(Matrix<Complex32> other, Matrix<Complex32> result)
         {
             var diagonalOther = other as DiagonalMatrix;
             var diagonalResult = result as DiagonalMatrix;

@@ -170,7 +170,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// </summary>
         /// <param name="other">The matrix to multiply with.</param>
         /// <param name="result">The result of the multiplication.</param>
-        protected override void DoMultiply(Matrix<Complex> other, Matrix<Complex> result)
+        public override void DoMultiply(Matrix<Complex> other, Matrix<Complex> result)
         {
             for (var i = 0; i < RowCount; i++)
             {

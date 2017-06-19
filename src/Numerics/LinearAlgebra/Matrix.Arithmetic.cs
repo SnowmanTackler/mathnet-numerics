@@ -119,7 +119,7 @@ namespace MathNet.Numerics.LinearAlgebra
         /// </summary>
         /// <param name="other">The matrix to multiply with.</param>
         /// <param name="result">The result of the multiplication.</param>
-        protected abstract void DoMultiply(Matrix<T> other, Matrix<T> result);
+        public abstract void DoMultiply(Matrix<T> other, Matrix<T> result);
 
         /// <summary>
         /// Multiplies this matrix with the transpose of another matrix and places the results into the result matrix.

@@ -317,7 +317,7 @@ namespace MathNet.Numerics.LinearAlgebra.Single
         /// </summary>
         /// <param name="other">The matrix to multiply with.</param>
         /// <param name="result">The result of the multiplication.</param>
-        protected override void DoMultiply(Matrix<float> other, Matrix<float> result)
+        public override void DoMultiply(Matrix<float> other, Matrix<float> result)
         {
             var diagonalOther = other as DiagonalMatrix;
             var diagonalResult = result as DiagonalMatrix;
